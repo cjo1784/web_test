@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍길동 - 개인 프로필</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .name {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .experience-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .experience-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .experience-company {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .experience-period {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: #e9ecef;
+        }
+
+        .contact-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .contact-value {
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-card {
+                padding: 20px;
+            }
+            
+            .name {
+                font-size: 2em;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="header">
+                <div class="profile-img">홍</div>
+                <h1 class="name">홍길동</h1>
+                <p class="title">웹 개발자 / 프론트엔드 전문가</p>
+                <p class="intro">
+                    안녕하세요! 창의적이고 사용자 중심의 웹 경험을 만드는 것을 좋아하는 개발자입니다. 
+                    새로운 기술을 배우고 도전하는 것을 즐기며, 팀과 함께 성장하는 것을 추구합니다.
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="section">
+                <h2 class="section-title">🚀 기술 스택</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Vue.js</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">Git</div>
+                    <div class="skill-item">MySQL</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="section">
+                <h2 class="section-title">💼 경력</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">시니어 프론트엔드 개발자</div>
+                    <div class="experience-company">테크 스타트업</div>
+                    <div class="experience-period">2022년 3월 - 현재</div>
+                    <p>React와 TypeScript를 활용한 웹 애플리케이션 개발 및 팀 리딩</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">웹 개발자</div>
+                    <div class="experience-company">IT 솔루션 회사</div>
+                    <div class="experience-period">2020년 1월 - 2022년 2월</div>
+                    <p>Vue.js 기반 관리자 페이지 개발 및 API 연동 작업</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">주니어 개발자</div>
+                    <div class="experience-company">웹 에이전시</div>
+                    <div class="experience-period">2018년 6월 - 2019년 12월</div>
+                    <p>반응형 웹사이트 제작 및 jQuery 기반 인터랙션 구현</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="section">
+                <h2 class="section-title">🎓 학력 및 자격증</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-title">컴퓨터공학과 학사</div>
+                    <div class="experience-company">한국대학교</div>
+                    <div class="experience-period">2014년 3월 - 2018년 2월</div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">정보처리기사</div>
+                    <div class="experience-company">한국산업인력공단</div>
+                    <div class="experience-period">2018년 취득</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <div class="section">
+                <h2 class="section-title">📞 연락처</h2>
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-label">이메일</div>
+                        <div class="contact-value">hong@example.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-label">연락처</div>
+                        <div class="contact-value">010-1234-5678</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🔗</div>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">github.com/honggildong</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">linkedin.com/in/honggildong</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 홍길동. 모든 권리 보유.</p>
+    </div>
+</body>
+</html>
